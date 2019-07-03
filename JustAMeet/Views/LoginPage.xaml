@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             BackgroundColor="{StaticResource NavigationPrimary}"
+             x:Class="JustAMeet.Views.LoginPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackLayout Padding="10" Grid.Row="0" VerticalOptions="FillAndExpand" BackgroundColor="AntiqueWhite">
+                <Label Text="LOGIN" />
+                <Entry Placeholder="Username" PlaceholderColor="LightGray" BackgroundColor="White" />
+                <Entry Placeholder="Password" IsPassword="True" PlaceholderColor="LightGray" BackgroundColor="White" />
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage> 
