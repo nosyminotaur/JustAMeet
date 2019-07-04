@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Diagnostics;
-using System.Threading.Tasks;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace JustAMeet.Views
 {
@@ -16,8 +12,16 @@ namespace JustAMeet.Views
             InitializeComponent();
         }
 
-        private async void LoginButton_Clicked(object sender, EventArgs e)
+        protected override void OnAppearing()
         {
+            base.OnAppearing();
+            //Add a fadeanimation to the entire page on load
+            MainGrid.FadeTo(1, 2000, Easing.SpringIn);
+        }
+
+        private async void SignInButton_Clicked(object sender, EventArgs e)
+        {
+            //Change page to the Login Page
             await Navigation.PushAsync(new LoginPage());
         }
     }

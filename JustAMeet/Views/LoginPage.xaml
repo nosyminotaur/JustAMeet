@@ -4,7 +4,6 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             BackgroundColor="{StaticResource NavigationPrimary}"
              x:Class="JustAMeet.Views.LoginPage">
     <ContentPage.Content>
         <Grid>
@@ -12,7 +11,8 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <StackLayout Padding="10" Grid.Row="0" VerticalOptions="FillAndExpand" BackgroundColor="AntiqueWhite">
-                <Label Text="LOGIN" />
+                <Label Text="LOGIN" FontSize="Large">
+                </Label>
                 <Entry Placeholder="Username" PlaceholderColor="LightGray" BackgroundColor="White" />
                 <Entry Placeholder="Password" IsPassword="True" PlaceholderColor="LightGray" BackgroundColor="White" />
             </StackLayout>

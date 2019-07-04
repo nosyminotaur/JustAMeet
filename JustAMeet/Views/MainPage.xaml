@@ -4,11 +4,44 @@
             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
             mc:Ignorable="d"
-            x:Class="JustAMeet.Views.MainPage">
+            BackgroundImageSource="main_background.jpg"
+            x:Class="JustAMeet.Views.MainPage"
+            NavigationPage.HasNavigationBar="False">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="LoginSignupButtonStyle" TargetType="Button">
+                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="HeightRequest" Value="70" />
+                <Setter Property="WidthRequest" Value="150" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout Margin="10" BackgroundColor="Azure">
-            <Label Text="Hello!" />
-            <Button Text="Login" Clicked="LoginButton_Clicked" />
-        </StackLayout>
+        <Grid x:Name="MainGrid" Opacity="0">
+            <Grid.RowDefinitions>
+                <!--This row contains the welcome text-->
+                <RowDefinition Height="2*" />
+                <!--This row contains the two buttons, login and signup-->
+                <RowDefinition Height="120" />
+                <!--Empty row to force sign buttons upward-->
+                <RowDefinition Height="300" />
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0" VerticalOptions="FillAndExpand" HorizontalOptions="Center" Padding="10">
+                <Label x:Name="HeaderLabel" Margin="0,30,0,30" FontFamily="Sniglet-Regular.ttf#Sniglet-Regular" FontSize="36" HorizontalTextAlignment="Center">
+                    <Label.Text>
+                        JustAMeet
+                    </Label.Text>
+                </Label>
+                <Label x:Name="CaptionLabel" FontFamily="Sniglet-Regular.ttf#Sniglet-Regular" FontSize="20" HorizontalTextAlignment="Center">
+                    <Label.Text>
+                        Meet people you were destined to meet.
+                    </Label.Text>
+                </Label>
+            </StackLayout>
+            <StackLayout Grid.Row="1" Orientation="Horizontal" HorizontalOptions="Center" Margin="0,0,0,40">
+                <ImageButton Source="signin_button.png" Clicked="SignInButton_Clicked" HorizontalOptions="Center" VerticalOptions="Center" />
+                <ImageButton Source="signup_button.png" HorizontalOptions="Center" VerticalOptions="Center" />
+            </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
