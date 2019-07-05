@@ -24,5 +24,10 @@ namespace JustAMeet.Views
             //Change page to the Login Page
             await Navigation.PushAsync(new LoginPage());
         }
+        private async void SignUpButton_Clicked(object sender, EventArgs e)
+        {
+            //Change page to the Sign up Page
+            await Navigation.PushAsync(new SignUp());
+        }
     }
 }

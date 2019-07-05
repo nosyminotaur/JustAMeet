@@ -4,18 +4,19 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             BackgroundImagesoucre ="signup_bg.jpg"
+             BackgroundImageSource="signin_bg.png"
              x:Class="JustAMeet.Views.LoginPage">
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <StackLayout Padding="10" Grid.Row="0" VerticalOptions="FillAndExpand" BackgroundColor="AntiqueWhite">
-                <Label Text="LOGIN" FontSize="Large">
+            <StackLayout Padding="0" Grid.Row="0" VerticalOptions="CenterAndExpand" >
+                <!--The L in LOGIN looks strange because it's hanging off-->
+                <Label Text="LOGIN" FontSize="Large" TextColor="Black">
                 </Label>
-                <Entry Placeholder="Username" PlaceholderColor="LightGray" BackgroundColor="White" />
-                <Entry Placeholder="Password" IsPassword="True" PlaceholderColor="LightGray" BackgroundColor="White" />
+                <Entry Placeholder="Username" PlaceholderColor="LightGray" BackgroundColor="White" FontSize="Large" />
+                <Entry Placeholder="Password" IsPassword="True" PlaceholderColor="LightGray" BackgroundColor="White" FontSize="Large"/>
             </StackLayout>
         </Grid>
     </ContentPage.Content>

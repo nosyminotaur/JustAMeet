@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace JustAMeet.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Signup : ContentPage
+    public partial class SignUp : ContentPage
     {
-        public Signup()
+        public SignUp()
         {
             InitializeComponent();
         }

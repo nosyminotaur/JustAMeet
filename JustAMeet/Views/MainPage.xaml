@@ -4,7 +4,7 @@
             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
             mc:Ignorable="d"
-            BackgroundImageSource="signup_bg.jpg"
+            BackgroundImageSource="main_background.jpg"
             x:Class="JustAMeet.Views.MainPage"
             NavigationPage.HasNavigationBar="False">
     <ContentPage.Resources>
@@ -40,7 +40,7 @@
             </StackLayout>
             <StackLayout Grid.Row="1" Orientation="Horizontal" HorizontalOptions="Center" Margin="0,0,0,40">
                 <ImageButton Source="signin_button.png" Clicked="SignInButton_Clicked" HorizontalOptions="Center" VerticalOptions="Center" />
-                <ImageButton Source="signup_button.png" HorizontalOptions="Center" VerticalOptions="Center" />
+                <ImageButton Source="signup_button.png" Clicked="SignUpButton_Clicked" HorizontalOptions="Center" VerticalOptions="Center" />
             </StackLayout>
         </Grid>
     </ContentPage.Content>
