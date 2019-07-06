@@ -4,20 +4,20 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             BackgroundImageSource ="signup_bg.png"
-             x:Class="JustAMeet.Views.SignUp">
+             NavigationPage.HasNavigationBar="False"
+             BackgroundImageSource="signup_bg.jpg"
+             x:Class="JustAMeet.Views.SignUp" >
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <StackLayout Padding="0" Grid.Row="0" VerticalOptions="CenterAndExpand">
-                <Label Text="SIGN UP" FontSize="Large" TextColor="White">
-                </Label>
-                <Entry Placeholder="Username" PlaceholderColor="LightGray" BackgroundColor="White" FontSize="Large"/>
-                <Entry Placeholder="Password" IsPassword="True" PlaceholderColor="LightGray" BackgroundColor="White" FontSize="Large"/>
-                <!--Not sure how to verify the passwords-->
-                <Entry Placeholder="Confirm Password" IsPassword ="True" PlaceholderColor ="LightGray" BackgroundColor ="white" FontSize="Large"/>
+            <StackLayout Padding="60,0,60,0" Grid.Row="0" BackgroundColor="Transparent" VerticalOptions="CenterAndExpand">
+                <Label Text="SIGN UP" FontSize="54" Margin="0,0,0,20"  TextColor="LightCoral" FontFamily="AmaticSC/AmaticSC-Bold.ttf#AmaticSC-Bold" HorizontalTextAlignment="Center" />
+                <Entry Placeholder="Username" Style="{StaticResource EntryStyle}" />
+                <Entry Placeholder="Password" IsPassword="True" Style="{StaticResource EntryStyle}" />
+                <Entry Placeholder="Confirm Password" IsPassword ="True" Style="{StaticResource EntryStyle}" />
             </StackLayout>
         </Grid>
     </ContentPage.Content>

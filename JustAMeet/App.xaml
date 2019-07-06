@@ -9,7 +9,13 @@
             <Color x:Key="MainPageBG">##FFF7F0</Color>
             <Color x:Key="PrimaryColor">#FFF0E3</Color>
             <Color x:Key="SecondaryColor">#FCB857</Color>
+            <Color x:Key="SignUpLowerBGColor">#FEFCF9</Color>
+            <Style x:Key="EntryStyle" TargetType="Entry">
+                <Setter Property="PlaceholderColor" Value="Gray" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="FontSize" Value="24" />
+                <Setter Property="FontFamily" Value="Raleway/Raleway-Light.ttf#Raleway-Light" />
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
-    
 </Application>

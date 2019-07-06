@@ -4,19 +4,20 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             BackgroundImageSource="signin_bg.png"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundImageSource="signin_bg.jpg"
              x:Class="JustAMeet.Views.LoginPage">
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
+                <RowDefinition Height="3*" />
             </Grid.RowDefinitions>
-            <StackLayout Padding="0" Grid.Row="0" VerticalOptions="CenterAndExpand" >
-                <!--The L in LOGIN looks strange because it's hanging off-->
-                <Label Text="LOGIN" FontSize="Large" TextColor="Black">
+            <StackLayout Padding="60,30,60,0" Grid.Row="1" BackgroundColor="Transparent">
+                <Label Text="LOGIN" FontSize="54" Margin="0,0,0,20"  TextColor="LightCoral" FontFamily="AmaticSC/AmaticSC-Bold.ttf#AmaticSC-Bold" HorizontalTextAlignment="Center">
                 </Label>
-                <Entry Placeholder="Username" PlaceholderColor="LightGray" BackgroundColor="White" FontSize="Large" />
-                <Entry Placeholder="Password" IsPassword="True" PlaceholderColor="LightGray" BackgroundColor="White" FontSize="Large"/>
+                <Entry Placeholder="Username" Style="{StaticResource EntryStyle}" />
+                <Entry Placeholder="Password" IsPassword="True" Style="{StaticResource EntryStyle}"/>
             </StackLayout>
         </Grid>
     </ContentPage.Content>

@@ -68,10 +68,30 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\OpenSans-Regular.ttf" />
-    <AndroidAsset Include="Assets\OpenSans-Light.ttf" />
+    <AndroidAsset Include="Assets\OpenSans\OpenSans-Regular.ttf" />
+    <AndroidAsset Include="Assets\OpenSans\OpenSans-Light.ttf" />
     <AndroidAsset Include="Assets\Sniglet-ExtraBold.ttf" />
     <AndroidAsset Include="Assets\Sniglet-Regular.ttf" />
+    <AndroidAsset Include="Assets\Raleway\Raleway-Black.ttf" />
+    <AndroidAsset Include="Assets\Raleway\Raleway-BlackItalic.ttf" />
+    <AndroidAsset Include="Assets\Raleway\Raleway-Bold.ttf" />
+    <AndroidAsset Include="Assets\Raleway\Raleway-BoldItalic.ttf" />
+    <AndroidAsset Include="Assets\Raleway\Raleway-ExtraBold.ttf" />
+    <AndroidAsset Include="Assets\Raleway\Raleway-ExtraBoldItalic.ttf" />
+    <AndroidAsset Include="Assets\Raleway\Raleway-ExtraLight.ttf" />
+    <AndroidAsset Include="Assets\Raleway\Raleway-ExtraLightItalic.ttf" />
+    <AndroidAsset Include="Assets\Raleway\Raleway-Italic.ttf" />
+    <AndroidAsset Include="Assets\Raleway\Raleway-Light.ttf" />
+    <AndroidAsset Include="Assets\Raleway\Raleway-LightItalic.ttf" />
+    <AndroidAsset Include="Assets\Raleway\Raleway-Medium.ttf" />
+    <AndroidAsset Include="Assets\Raleway\Raleway-MediumItalic.ttf" />
+    <AndroidAsset Include="Assets\Raleway\Raleway-Regular.ttf" />
+    <AndroidAsset Include="Assets\Raleway\Raleway-SemiBold.ttf" />
+    <AndroidAsset Include="Assets\Raleway\Raleway-SemiBoldItalic.ttf" />
+    <AndroidAsset Include="Assets\Raleway\Raleway-Thin.ttf" />
+    <AndroidAsset Include="Assets\Raleway\Raleway-ThinItalic.ttf" />
+    <AndroidAsset Include="Assets\AmaticSC\AmaticSC-Bold.ttf" />
+    <AndroidAsset Include="Assets\AmaticSC\AmaticSC-Regular.ttf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
@@ -125,10 +145,16 @@
     <AndroidResource Include="Resources\drawable\main_background.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\signup_bg.png" />
+    <AndroidResource Include="Resources\drawable\signup_bg_prev.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\signin_bg.png" />
+    <AndroidResource Include="Resources\drawable\signup_bg_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\signup_bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\signin_bg.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
