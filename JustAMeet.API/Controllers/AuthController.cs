@@ -1,18 +1,95 @@
 ﻿using System;
 using System.Threading.Tasks;
+using JustAMeet.API.DTO;
+using JustAMeet.Core.Entities;
+using JustAMeet.Core.Interfaces;
+using JustAMeet.Core.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 
 namespace JustAMeet.API.Controllers
 {
-    //Auth controller
+    [Authorize]
     [Route("api/auth")]
     [ApiController]
     public class AuthController : ControllerBase
     {
+        #region private variables
         //keep it empty right now, add authrepo later on
-        public AuthController()
+        private readonly IConfiguration configuration;
+        private readonly IAuthRepository authRepo;
+        private readonly string SECRET_KEY;
+        //TODO Use appsettings instead for EXPIRE_TIME
+        private readonly double EXPIRE_TIME = 300;
+        #endregion
+        public AuthController(IConfiguration configuration, IAuthRepository authRepo)
         {
+            this.configuration = configuration;
+            this.authRepo = authRepo;
+            SECRET_KEY = this.configuration.GetSection("JWTKey").Value;
+        }
 
+        //Allow access to anyone for creating a new account
+        [AllowAnonymous]
+        [HttpGet("signup")]
+        public async Task<IActionResult> Signup([FromBody]SignupDTO userIn)
+        {
+            InternalUser result = await authRepo.Register(userIn.email, userIn.username, userIn.password);
+            if (result.success)
+            {
+                string token = JWTHelper.GenerateToken(result.email, result.username, SECRET_KEY, EXPIRE_TIME);
+                return Ok(new UserOutDTO
+                {
+                    Email = result.email,
+                    Username = result.username,
+                    JwtToken = token,
+                    success = true
+                });
+            }
+            else
+            {
+                //No need to create a new UserOutDTO object, InternalUser doesn't contain any sensitive info
+                return BadRequest(result);
+            }
+        }
+
+        [HttpPost("email-login")]
+        [AllowAnonymous]
+        public async Task<IActionResult> EmailLogin([FromBody]EmailLoginDTO userIn)
+        {
+            InternalUser result = await authRepo.EmailLogin(userIn.email, userIn.password);
+            if (!result.success)
+            {
+                return BadRequest(result);
+            }
+            string token = JWTHelper.GenerateToken(result.email, result.username, SECRET_KEY, EXPIRE_TIME);
+            return Ok(new UserOutDTO
+            {
+                Username = result.username,
+                Email = result.email,
+                JwtToken = token,
+                success = true
+            });
+        }
+
+        [AllowAnonymous]
+        [HttpPost("username-login")]
+        public async Task<IActionResult> UsernameLogin([FromBody]UsernameLoginDTO userIn)
+        {
+            InternalUser result = await authRepo.UsernameLogin(userIn.username, userIn.password);
+            if (!result.success)
+            {
+                return BadRequest(result);
+            }
+            string token = JWTHelper.GenerateToken(result.email, result.username, SECRET_KEY, EXPIRE_TIME);
+            return Ok(new UserOutDTO
+            {
+                Username = result.username,
+                Email = result.email,
+                JwtToken = token,
+                success = true
+            });
         }
     }
 }
