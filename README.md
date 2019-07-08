@@ -31,12 +31,13 @@ Online dating software such as Tinder and Bumble shifts the user focus to swipe 
 
 Brinden Robinson
 
+- Class Diagram
 - Sequence Diagram
 - Mobile UI Design
 
 Harsh Pathak
 
-- Mobile UI Sourcer/Design
+- Mobile UI Design
 
 Jacob Pitoniak
 
@@ -47,10 +48,6 @@ Javier Gomez
 
 - Requirements
 - Documentation of project (project deliverable)
-
-Kermit Alexander
-
-- Class Diagram
 
 Sanjay Poudel
 
