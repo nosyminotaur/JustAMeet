@@ -7,6 +7,7 @@ using JustAMeet.Core.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 
 namespace JustAMeet.API.Controllers
 {
@@ -22,19 +23,24 @@ namespace JustAMeet.API.Controllers
         private readonly string SECRET_KEY;
         //TODO Use appsettings instead for EXPIRE_TIME
         private readonly double EXPIRE_TIME = 300;
+        private ILogger<AuthController> logger;
         #endregion
-        public AuthController(IConfiguration configuration, IAuthRepository authRepo)
+        public AuthController(IConfiguration configuration, IAuthRepository authRepo, ILogger<AuthController> logger)
         {
             this.configuration = configuration;
             this.authRepo = authRepo;
+            this.logger = logger;
             SECRET_KEY = this.configuration.GetSection("JWTKey").Value;
         }
 
         //Allow access to anyone for creating a new account
         [AllowAnonymous]
-        [HttpGet("signup")]
+        [HttpPost("signup")]
         public async Task<IActionResult> Signup([FromBody]SignupDTO userIn)
         {
+            logger.LogInformation("Username: " + userIn.username);
+            logger.LogInformation("Email: " + userIn.email);
+            logger.LogInformation(this.Request.ContentLength.ToString());
             InternalUser result = await authRepo.Register(userIn.email, userIn.username, userIn.password);
             if (result.success)
             {

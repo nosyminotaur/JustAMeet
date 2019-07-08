@@ -26,8 +26,13 @@ namespace JustAMeet.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //Prevent adding MVC/Razor Pages
-            services.AddControllers();
+            services.AddMvc(options =>
+            {
+                options.EnableEndpointRouting = false;
+            }).AddNewtonsoftJson(options => 
+            {
+                options.SerializerSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
+            });
 
             //Connection string for Database
             string connection = Configuration.GetConnectionString("MainDB");
@@ -80,16 +85,11 @@ namespace JustAMeet.API
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
-
-            app.UseRouting();
+            //app.UseHttpsRedirection();
 
             app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
+            app.UseMvcWithDefaultRoute();
         }
     }
 }
