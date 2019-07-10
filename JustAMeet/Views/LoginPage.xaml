@@ -10,14 +10,18 @@
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
+                <!--Mountain wallpaper till here-->
+                <RowDefinition Height="2*" /> 
+                <!--Changed to double the height.-->
+                <RowDefinition Height="2*" />
+                <!--Holds the Sign In Label and arrow button.-->
                 <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
+                <!--Holds the last stacklayout-->
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <StackLayout Padding="60,30,60,0" Grid.Row="1" BackgroundColor="Transparent">
+            <StackLayout Padding="60,0" Grid.Row="1" BackgroundColor="Transparent">
                 <Label Text="Welcome back!" FontSize="48" Margin="0,0,0,40"  TextColor="LightCoral" FontFamily="{StaticResource AmaticSCBold}" HorizontalTextAlignment="Center"/>
-                <Entry Placeholder="Username" Style="{StaticResource EntryStyle}" />
+                <Entry Placeholder="Username/Email" Style="{StaticResource EntryStyle}" />
                 <Entry Placeholder="Password" IsPassword="True" Style="{StaticResource EntryStyle}"/>
             </StackLayout>
             <StackLayout Grid.Row="2" Padding="30" Orientation="Horizontal">
