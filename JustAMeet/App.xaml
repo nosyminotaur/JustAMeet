@@ -10,11 +10,29 @@
             <Color x:Key="PrimaryColor">#FFF0E3</Color>
             <Color x:Key="SecondaryColor">#FCB857</Color>
             <Color x:Key="SignUpLowerBGColor">#FEFCF9</Color>
+            <x:String x:Key="RalewayLight">Raleway/Raleway-Light.ttf#Raleway-Light</x:String>
+            <x:String x:Key="RalewayBold">Raleway/Raleway-Bold.ttf#Raleway-Bold</x:String>
+            <x:String x:Key="RalewayRegular">Raleway/Raleway-Regular.ttf#Raleway-Regular</x:String>
+            <x:String x:Key="AmaticSCBold">AmaticSC/AmaticSC-Bold.ttf#AmaticSC-Bold</x:String>
+            <x:String x:Key="AmaticSCRegular">AmaticSC/AmaticSC-Regular.ttf#AmaticSC-Regular</x:String>
             <Style x:Key="EntryStyle" TargetType="Entry">
                 <Setter Property="PlaceholderColor" Value="Gray" />
                 <Setter Property="TextColor" Value="Black" />
-                <Setter Property="FontSize" Value="24" />
-                <Setter Property="FontFamily" Value="Raleway/Raleway-Light.ttf#Raleway-Light" />
+                <Setter Property="FontSize" Value="28" />
+                <Setter Property="FontFamily" Value="{StaticResource RalewayLight}" />
+            </Style>
+            <Style x:Key="ArrowButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource SecondaryColor}" />
+                <Setter Property="Text" Value="&#x0002192;" />
+                <Setter Property="FontSize" Value="42" />
+                <Setter Property="FontFamily" Value="{StaticResource RalewayBold}" />
+                <Setter Property="Padding" Value="0,0,0,10" />
+                <Setter Property="BorderWidth" Value="0" />
+                <Setter Property="CornerRadius" Value="40" />
+                <Setter Property="HeightRequest" Value="80" />
+                <Setter Property="WidthRequest" Value="80" />
+                <Setter Property="HorizontalOptions" Value="EndAndExpand" />
+                <Setter Property="VerticalOptions" Value="Center" />
             </Style>
         </ResourceDictionary>
     </Application.Resources>

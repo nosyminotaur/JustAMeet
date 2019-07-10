@@ -39,8 +39,8 @@
                 </Label>
             </StackLayout>
             <StackLayout Grid.Row="1" Orientation="Horizontal" HorizontalOptions="Center" Margin="0,0,0,40">
-                <ImageButton Source="signin_button.png" Clicked="SignInButton_Clicked" HorizontalOptions="Center" VerticalOptions="Center" />
-                <ImageButton Source="signup_button.png" Clicked="SignUpButton_Clicked" HorizontalOptions="Center" VerticalOptions="Center" />
+                <Button Text="SIGN IN"  Clicked="SignInButton_Clicked" BackgroundColor="{StaticResource PrimaryColor}" FontFamily="{StaticResource AmaticSCRegular}" Padding="20,20,20,20" FontSize="36" BorderWidth="0" HorizontalOptions="Center" VerticalOptions="Center" />
+                <Button Text="SIGN UP"  Clicked="SignUpButton_Clicked" BackgroundColor="{StaticResource SecondaryColor}" FontFamily="{StaticResource AmaticSCRegular}" Padding="20,20,20,20" FontSize="36" BorderWidth="0" HorizontalOptions="Center" VerticalOptions="Center" />
             </StackLayout>
         </Grid>
     </ContentPage.Content>

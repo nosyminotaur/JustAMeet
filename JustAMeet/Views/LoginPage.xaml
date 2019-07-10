@@ -11,13 +11,26 @@
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
-                <RowDefinition Height="3*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <StackLayout Padding="60,30,60,0" Grid.Row="1" BackgroundColor="Transparent">
-                <Label Text="LOGIN" FontSize="54" Margin="0,0,0,20"  TextColor="LightCoral" FontFamily="AmaticSC/AmaticSC-Bold.ttf#AmaticSC-Bold" HorizontalTextAlignment="Center">
-                </Label>
+                <Label Text="Welcome back!" FontSize="48" Margin="0,0,0,40"  TextColor="LightCoral" FontFamily="{StaticResource AmaticSCBold}" HorizontalTextAlignment="Center"/>
                 <Entry Placeholder="Username" Style="{StaticResource EntryStyle}" />
                 <Entry Placeholder="Password" IsPassword="True" Style="{StaticResource EntryStyle}"/>
+            </StackLayout>
+            <StackLayout Grid.Row="2" Padding="30" Orientation="Horizontal">
+                <Label FontFamily="{StaticResource RalewayBold}"
+                           Text="Sign in"
+                           FontSize="32"
+                           HorizontalOptions="CenterAndExpand"
+                           VerticalOptions="Center"/>
+                <Button Style="{StaticResource ArrowButton}" />
+            </StackLayout>
+            <StackLayout Grid.Row="3" Padding="30" Orientation="Horizontal">
+                <Label x:Name="SignupLabel" FontSize="Large" FontFamily="{StaticResource RalewayBold}" Text="Sign up" TextDecorations="Underline" HorizontalOptions="StartAndExpand" />
+                <Label x:Name="ForgotPasswordLabel" FontSize="Large" FontFamily="{StaticResource RalewayBold}" Text="Forgot Password" TextDecorations="Underline" HorizontalOptions="EndAndExpand"/>
             </StackLayout>
         </Grid>
     </ContentPage.Content>
