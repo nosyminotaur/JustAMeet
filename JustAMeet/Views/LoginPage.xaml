@@ -11,9 +11,7 @@
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
+                <RowDefinition Height="2*" /> <!--Only changed the height from * -> 2*, change it at will ofc-->
             </Grid.RowDefinitions>
             <StackLayout Padding="60,30,60,0" Grid.Row="1" BackgroundColor="Transparent">
                 <Label Text="Welcome back!" FontSize="48" Margin="0,0,0,40"  TextColor="LightCoral" FontFamily="{StaticResource AmaticSCBold}" HorizontalTextAlignment="Center"/>
@@ -22,11 +20,11 @@
             </StackLayout>
             <StackLayout Grid.Row="2" Padding="30" Orientation="Horizontal">
                 <Label FontFamily="{StaticResource RalewayBold}"
-                           Text="Sign in"
-                           FontSize="32"
+                Text="Sign in"
+                           FontSize="16"
                            HorizontalOptions="CenterAndExpand"
                            VerticalOptions="Center"/>
-                <Button Style="{StaticResource ArrowButton}" />
+               <Button Style="{StaticResource ArrowButton}" />
             </StackLayout>
             <StackLayout Grid.Row="3" Padding="30" Orientation="Horizontal">
                 <Label x:Name="SignupLabel" FontSize="Large" FontFamily="{StaticResource RalewayBold}" Text="Sign up" TextDecorations="Underline" HorizontalOptions="StartAndExpand" />

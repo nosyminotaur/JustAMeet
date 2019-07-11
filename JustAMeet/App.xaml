@@ -6,7 +6,7 @@
              x:Class="JustAMeet.App">
     <Application.Resources>
         <ResourceDictionary>
-            <Color x:Key="MainPageBG">##FFF7F0</Color>
+            <Color x:Key="MainPageBG">#FFF7F0</Color>
             <Color x:Key="PrimaryColor">#FFF0E3</Color>
             <Color x:Key="SecondaryColor">#FCB857</Color>
             <Color x:Key="SignUpLowerBGColor">#FEFCF9</Color>
@@ -22,6 +22,19 @@
                 <Setter Property="FontFamily" Value="{StaticResource RalewayLight}" />
             </Style>
             <Style x:Key="ArrowButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource SecondaryColor}" />
+                <Setter Property="Text" Value="&#x0002192;" /> <!--What do you think-->
+                <Setter Property="FontSize" Value="42" />
+                <Setter Property="FontFamily" Value="{StaticResource RalewayBold}" />
+                <Setter Property="Padding" Value="0,0,0,10" />
+                <Setter Property="BorderWidth" Value="0" />
+                <Setter Property="CornerRadius" Value="40" />
+                <Setter Property="HeightRequest" Value="80" />
+                <Setter Property="WidthRequest" Value="80" />
+                <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style >
+            <Style x:Key="RightButton" TargetType="Button">
                 <Setter Property="BackgroundColor" Value="{StaticResource SecondaryColor}" />
                 <Setter Property="Text" Value="&#x0002192;" />
                 <Setter Property="FontSize" Value="42" />
