@@ -25,6 +25,19 @@
             A good idea is, apps that have a dark mode too. You can switch to using the dark button if you'd like. I'll show an example-->
             <Style x:Key="ArrowButton" TargetType="Button">
                 <Setter Property="BackgroundColor" Value="{StaticResource SecondaryColor}" />
+                <Setter Property="Text" Value="&#x0002192;" /> <!--What do you think-->
+                <Setter Property="FontSize" Value="42" />
+                <Setter Property="FontFamily" Value="{StaticResource RalewayBold}" />
+                <Setter Property="Padding" Value="0,0,0,10" />
+                <Setter Property="BorderWidth" Value="0" />
+                <Setter Property="CornerRadius" Value="40" />
+                <Setter Property="HeightRequest" Value="80" />
+                <Setter Property="WidthRequest" Value="80" />
+                <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style >
+            <Style x:Key="RightButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource SecondaryColor}" />
                 <Setter Property="Text" Value="&#x0002192;" />
                 <Setter Property="FontSize" Value="42" />
                 <Setter Property="FontFamily" Value="{StaticResource RalewayBold}" />
