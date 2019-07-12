@@ -11,5 +11,9 @@ namespace JustAMeet.Views
         {
             InitializeComponent();
         }
+        //private void OnSliderValueChanged(object sender, ValueChangedEventArgs args)
+        //{
+        //    HeaderLabel.Text = args.NewValue.ToString("F3");
+        //}
     }
 }

@@ -22,7 +22,8 @@
                 <Entry Placeholder="Confirm Password" IsPassword ="True" Style="{StaticResource EntryStyle}" />
             </StackLayout>
             <StackLayout Grid.Row ="2" Padding="30" Orientation="Horizontal">
-                <Button Style="{StaticResource RightButton}"/>
+                <Button Style="{StaticResource RightButton}" Clicked="AboutMeButton_Clicked" />
+                
             </StackLayout>
         </Grid>
     </ContentPage.Content>

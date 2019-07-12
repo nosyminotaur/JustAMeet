@@ -1,15 +1,50 @@
-<<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              NavigationPage.HasNavigationBar="False"
-             BackgroundImageSource="warmsummer.jpg"
+             BackgroundImageSource="main_page_header.jpg" 
              x:Class="JustAMeet.Views.AboutMe">
-    <Content.Resource>
-        <StackLayout >
-            
-        </StackLayout>
-    </Content.Resource>
+    <!--Background=filler. Will be replaced-->
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height= "120"/>
+                <RowDefinition Height= "Auto"/>
+                <RowDefinition Height= "Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackLayout Padding="10" Margin ="0,30,0,30">
+                <Label x:Name ="HeaderLabel"
+                     Grid.Row="2" Grid.Column="2"
+                    Text="About Me"
+                    Opacity ="1" 
+                    HorizontalOptions ="Center" 
+                    VerticalOptions="FillAndExpand"
+                    FontSize="30"
+                    FontAttributes="Bold"
+                    FontFamily="Lora"
+                    TextColor ="Black"/>
+                <Label x:Name="BodyContext"
+                       TextColor="Black"
+                       FontFamily="Lora"
+                       Opacity=".75"
+                       FontSize="21"
+                      HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand">
+                    <Label.Text>
+                    I really Like people that are..
+                    </Label.Text>
+                    <!--<Slider VerticalOptions="EndAndExpand"
+                  ValueChanged="OnSliderValueChanged"/> Considering multiple sliders for rating accuracy-->
+                </Label>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
 </ContentPage>

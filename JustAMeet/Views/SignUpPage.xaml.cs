@@ -16,5 +16,9 @@ namespace JustAMeet.Views
         {
             InitializeComponent();
         }
+        private async void AboutMeButton_Clicked(object sender, EventArgs e)
+        {   
+            await Navigation.PushAsync(new AboutMe());
+        }
     }
 }
