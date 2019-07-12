@@ -97,5 +97,46 @@ namespace JustAMeet.API.Controllers
                 success = true
             });
         }
+
+        [AllowAnonymous]
+        [HttpPost("google-login")]
+        public async Task<IActionResult> GoogleLogin([FromBody]string token)
+        {
+            InternalUser result = await authRepo.GoogleLogin(token);
+            if (!result.success)
+            {
+                return BadRequest(result);
+            }
+            string jwt = JWTHelper.GenerateToken(result.email, result.username, SECRET_KEY, EXPIRE_TIME);
+            return Ok(new UserOutDTO
+            {
+                Username = result.username,
+                Email = result.email,
+                JwtToken = jwt,
+                success = true
+            });
+        }
+
+        [AllowAnonymous]
+        [HttpGet("username-exists")]
+        public async Task<IActionResult> UsernameExists([FromBody]string username)
+        {
+            var userexists = await authRepo.UsernameExists(username);
+            return Ok(new
+            {
+                userexists
+            });
+        }
+
+        [AllowAnonymous]
+        [HttpGet("email-exists")]
+        public async Task<IActionResult> EmailExists([FromBody]string email)
+        {
+            var userexists = await authRepo.UsernameExists(email);
+            return Ok(new
+            {
+                userexists
+            });
+        }
     }
 }

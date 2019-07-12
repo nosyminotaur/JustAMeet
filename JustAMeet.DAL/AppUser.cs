@@ -1,9 +1,10 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using System.Collections.Generic;
 
 namespace JustAMeet.DAL
 {
     public class AppUser : IdentityUser
     {
-        //Add custom properties later
+        public List<LoginProvider> LoginProviders;
     }
 }
