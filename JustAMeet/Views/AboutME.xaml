@@ -5,45 +5,51 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              NavigationPage.HasNavigationBar="False"
-             BackgroundImageSource="main_page_header.jpg" 
+             BackgroundImageSource="signup_bg.jpg" 
              x:Class="JustAMeet.Views.AboutMe">
-    <!--Background=filler. Will be replaced-->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <LayoutOptions x:Key=" horzOptions"
+                            Alignment ="Center"/>
+            <LayoutOptions x:Key="vertOptions"
+                           Alignment ="Center"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
+
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height= "120"/>
-                <RowDefinition Height= "Auto"/>
-                <RowDefinition Height= "Auto"/>
+                <RowDefinition Height= "*"/>
+                <RowDefinition Height= "*"/>
+                <RowDefinition Height= "2*"/>
+
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+
             </Grid.ColumnDefinitions>
-            <StackLayout Padding="10" Margin ="0,30,0,30">
+            <StackLayout Padding="10" Margin ="0,0,0,0" >
                 <Label x:Name ="HeaderLabel"
-                     Grid.Row="2" Grid.Column="2"
                     Text="About Me"
                     Opacity ="1" 
-                    HorizontalOptions ="Center" 
+                    HorizontalOptions="FillAndExpand" 
                     VerticalOptions="FillAndExpand"
-                    FontSize="30"
+                    FontSize="23"
                     FontAttributes="Bold"
-                    FontFamily="Lora"
+                    FontFamily="Lobster.tff#Lobster"
                     TextColor ="Black"/>
                 <Label x:Name="BodyContext"
+                       Margin="0,0,0,0"
+                       Text ="I really Like people that are.."
                        TextColor="Black"
-                       FontFamily="Lora"
+                       FontFamily="Arial.tff#Arial"
                        Opacity=".75"
-                       FontSize="21"
-                      HorizontalOptions="CenterAndExpand"
-                       VerticalOptions="CenterAndExpand">
-                    <Label.Text>
-                    I really Like people that are..
-                    </Label.Text>
-                    <!--<Slider VerticalOptions="EndAndExpand"
-                  ValueChanged="OnSliderValueChanged"/> Considering multiple sliders for rating accuracy-->
-                </Label>
+                       FontSize="20"
+                       VerticalOptions= "CenterAndExpand" 
+                       HorizontalOptions="CenterAndExpand"
+                    />
             </StackLayout>
         </Grid>
     </ContentPage.Content>
