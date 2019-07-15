@@ -16,6 +16,11 @@ namespace JustAMeet.Views
         {
 
         }
+
+        private void AboveEighteenSwitch_Toggled(object sender, ToggledEventArgs e)
+        {
+
+        }
         //private void OnSliderValueChanged(object sender, ValueChangedEventArgs args)
         //{
         //    HeaderLabel.Text = args.NewValue.ToString("F3");
