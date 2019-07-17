@@ -19,6 +19,11 @@
   <ItemGroup>
     <ProjectReference Include="..\JustAMeet.Core\JustAMeet.Core.csproj" />
     <ProjectReference Include="..\JustAMeet.DAL\JustAMeet.DAL.csproj" />
+    <ProjectReference Include="..\JustAMeet.Shared\JustAMeet.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DTO\" />
   </ItemGroup>
 
 </Project>

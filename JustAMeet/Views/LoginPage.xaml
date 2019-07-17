@@ -34,7 +34,7 @@
                            FontSize="32"
                            HorizontalOptions="CenterAndExpand"
                            VerticalOptions="Center"/>
-                <Button Style="{StaticResource ArrowButton}" />
+                <Button Style="{StaticResource ArrowButton}" Command="{Binding }" />
             </StackLayout>
             <StackLayout Grid.Row="3" Padding="30" Orientation="Horizontal">
                 <Label x:Name="SignupLabel" FontSize="Medium" FontFamily="{StaticResource RalewayBold}" Text="Sign up" TextDecorations="Underline" HorizontalOptions="StartAndExpand" />

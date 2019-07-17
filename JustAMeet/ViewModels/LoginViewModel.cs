@@ -1,40 +1,24 @@
-﻿using System.Diagnostics;
+﻿using JustAMeet.Services;
+using System.Diagnostics;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace JustAMeet.ViewModels
 {
     class LoginViewModel : BaseViewModel
     {
-        /// <summary>
-        /// Holds username/email
-        /// </summary>
-        private string userData;
-        //Can the user submit the form?
-        private bool isFormValid;
+        public ICommand LoginCommand { get; private set; }
+        private IAuthService authService;
 
-        public string UserData
+        public LoginViewModel()
         {
-            get => userData;
-            set
-            {
-                userData = value;
-                UpdateData();
-                OnPropertyChanged(nameof(UserData));
-            }
+            LoginCommand = new Command(Login);
+            authService = new AuthService();
         }
 
-        public bool IsFormValid
+        public void Login()
         {
-            get => isFormValid;
-            set
-            {
-                isFormValid = value;
-                OnPropertyChanged(nameof(IsFormValid));
-            }
-        }
-
-        private void UpdateData()
-        {
-            Debug.WriteLine("Data updated!");
+            //Define username/email properties and then call the authService.Login() method
         }
     }
 }

@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace JustAMeet.API.DTO
+namespace JustAMeet.Shared.Models
 {
-    public class UsernameLoginDTO
+    public class SignupDTO
     {
         [Required(ErrorMessage = "Email is required")]
         [EmailAddress]

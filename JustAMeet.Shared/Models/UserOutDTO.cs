@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace JustAMeet.API.DTO
+namespace JustAMeet.Shared.Models
 {
     //Object returned to user
     public class UserOutDTO

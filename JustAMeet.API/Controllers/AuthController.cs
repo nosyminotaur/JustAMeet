@@ -4,6 +4,7 @@ using JustAMeet.API.DTO;
 using JustAMeet.Core.Entities;
 using JustAMeet.Core.Interfaces;
 using JustAMeet.Core.Services;
+using JustAMeet.Shared.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
