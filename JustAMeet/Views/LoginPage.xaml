@@ -6,10 +6,12 @@
              mc:Ignorable="d"
              NavigationPage.HasNavigationBar="False"
              BackgroundImageSource="signin_bg.jpg"
-             xmlns:vm="clr-namespace:JustAMeet.ViewModels"
+             xmlns:local="clr-namespace:JustAMeet.ViewModels"
              x:Class="JustAMeet.Views.LoginPage">
+              <!--Changed from vm to local-->
+
     <ContentPage.BindingContext>
-        <vm:LoginViewModel />
+        <local:LoginViewModel LoginCommand=""/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <Grid>
@@ -34,7 +36,7 @@
                            FontSize="32"
                            HorizontalOptions="CenterAndExpand"
                            VerticalOptions="Center"/>
-                <Button Style="{StaticResource ArrowButton}" Command="{Binding }" />
+                <Button Style="{StaticResource ArrowButton}" Command="{Binding UserData}" />
             </StackLayout>
             <StackLayout Grid.Row="3" Padding="30" Orientation="Horizontal">
                 <Label x:Name="SignupLabel" FontSize="Medium" FontFamily="{StaticResource RalewayBold}" Text="Sign up" TextDecorations="Underline" HorizontalOptions="StartAndExpand" />
