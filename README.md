@@ -1,6 +1,5 @@
 # Archived.
-## Future work continues in 
-### [FindMe](https://github.com/nosyminotaur/FindMe "FindMe on GitHub")
+## Future work continues in [FindMe](https://github.com/nosyminotaur/FindMe "FindMe on GitHub")
 
 
 # Software Engineering
